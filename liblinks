@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # add symbolic links from /usr/lib to /usr/lib/nvidia-396/ since that's where all the libs are after a driver update
-
 sudo ln -s /usr/lib/nvidia-396/libEGL.so.0 /usr/lib/libEGL.so.0
 sudo ln -s /usr/lib/nvidia-396/libEGLdispatch.so.0 /usr/lib/libEGLdispatch.so.0
+
+# added for CUDA 9.2 deviceQuery
+sudo ln -s /usr/lib/nvidia-396/libnvidia-fatbinaryloader.so.396.24.02 /usr/lib/libnvidia-fatbinaryloader.so.396.24.02
